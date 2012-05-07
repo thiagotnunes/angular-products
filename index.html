@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html lang="en" ng-app>
   <head>
     <meta charset="UTF-8">
     <title>Products manager</title>
@@ -8,6 +8,10 @@
         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
       }
     </style>
+
+    <script src="http://code.angularjs.org/angular-1.0.0rc7.min.js"></script>
+    <script src="js/product.js"></script>
+
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/product.css" rel="stylesheet">
   </head>
@@ -26,44 +30,46 @@
     </div>
 
     <div class="container-fluid">
-      <div class="row product">
-        <div class="span2">
-          <img src="http://placehold.it/160x120" alt="">
-        </div>
-        <div class="span1">
-          <img src="http://placehold.it/60x60" alt="">
-        </div>
-        <div class="span5">
-          <div class="Title">
-            <a href="#">
-              <h3>
-                This is the title and it should be aligned left
-              </h3>
-            </a>
+      <div class="products" ng-controller="ProductController">
+        <div class="row product" ng-repeat="product in products">
+          <div class="span2">
+            <img src="{{product.thumbnail}}" alt="">
           </div>
-          <div class="description">
-            This is the description and it should be below the title, with at least x... 
+          <div class="span1">
+            <img src="{{product.profile}}" alt="">
           </div>
-          <div class="feedback">
-            <div class="rating">
-              <img src="http://placehold.it/30x30" alt="">
-              <br />
-              Rating
+          <div class="span5">
+            <div class="Title">
+              <a href="#">
+                <h3>
+                  {{product.title}}
+                </h3>
+              </a>
             </div>
-            <div class="review">
-              <img src="http://placehold.it/30x30" alt="">
-              <br />
-              Review
-            </div> 
-          </div>
-        </div>
-        <div class="span2">
-          <div class="price-container">
-            <div class="price">
-              R$ 30,00
+            <div class="description">
+              {{product.description}}
             </div>
-            <div class="price-description">
-              Per product
+            <div class="feedback">
+              <div class="rating">
+                <img src="http://placehold.it/30x30" alt="">
+                <br />
+                {{product.ratings}}
+              </div>
+              <div class="review">
+                <img src="http://placehold.it/30x30" alt="">
+                <br />
+                {{product.reviews}}
+              </div> 
+            </div>
+          </div>
+          <div class="span2">
+            <div class="price-container">
+              <div class="price">
+                R$ {{product.price}}
+              </div>
+              <div class="price-description">
+                Per product
+              </div>
             </div>
           </div>
         </div>
