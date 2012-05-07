@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Products manager</title>
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/product.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="brand" href="#">Products</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row product">
+        <div class="span2">
+          <img src="http://placehold.it/160x120" alt="">
+        </div>
+        <div class="span1">
+          <img src="http://placehold.it/60x60" alt="">
+        </div>
+        <div class="span5">
+          <div class="Title">
+            <a href="#">
+              <h3>
+                This is the title and it should be aligned left
+              </h3>
+            </a>
+          </div>
+          <div class="description">
+            This is the description and it should be below the title, with at least x... 
+          </div>
+          <div class="feedback">
+            <div class="rating">
+              <img src="http://placehold.it/30x30" alt="">
+              <br />
+              Rating
+            </div>
+            <div class="review">
+              <img src="http://placehold.it/30x30" alt="">
+              <br />
+              Review
+            </div> 
+          </div>
+        </div>
+        <div class="span2">
+          <div class="price-container">
+            <div class="price">
+              R$ 30,00
+            </div>
+            <div class="price-description">
+              Per product
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
