@@ -9,7 +9,10 @@
       }
     </style>
 
+    <script src="js/underscore-min.js"></script>
     <script src="http://code.angularjs.org/angular-1.0.0rc7.min.js"></script>
+    <script src="js/accounting.min.js"></script>
+    <script src="js/accounting_configuration.js"></script>
     <script src="js/product.js"></script>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -33,10 +36,10 @@
       <div class="products" ng-controller="ProductController">
         <div class="row product" ng-repeat="product in products">
           <div class="span2">
-            <img src="{{product.thumbnail}}" alt="">
+            <img ng:src="{{product.thumbnail}}" class="my-thumbnail" alt="">
           </div>
           <div class="span1">
-            <img src="{{product.profile}}" alt="">
+            <img ng:src="{{product.profile}}" class="my-profile" alt="">
           </div>
           <div class="span5">
             <div class="Title">
@@ -51,21 +54,23 @@
             </div>
             <div class="feedback">
               <div class="rating">
-                <img src="http://placehold.it/30x30" alt="">
-                <br />
+                <div class="rating-image">
+                  <img src="img/like.png" width="25" height="25" alt="">
+                </div>
                 {{product.ratings}}
               </div>
               <div class="review">
-                <img src="http://placehold.it/30x30" alt="">
-                <br />
+                <div class="review-image">
+                  <img src="img/user.png" width="25" height="25" alt="">
+                </div>
                 {{product.reviews}}
               </div> 
             </div>
           </div>
-          <div class="span2">
+          <div class="span4">
             <div class="price-container">
               <div class="price">
-                R$ {{product.price}}
+                {{product.price}}
               </div>
               <div class="price-description">
                 Per product
