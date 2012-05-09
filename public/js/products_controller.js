@@ -1,4 +1,4 @@
-function ProductController($scope, $http) {
+function ProductsController($scope, $http) {
   var truncate = function(string, length) {
     if(string.length > length) {
       return string.substring(0, length) + "...";

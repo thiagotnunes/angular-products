@@ -13,7 +13,7 @@
     <script src="http://code.angularjs.org/angular-1.0.0rc7.min.js"></script>
     <script src="js/accounting.min.js"></script>
     <script src="js/accounting_configuration.js"></script>
-    <script src="js/product.js"></script>
+    <script src="js/products_controller.js"></script>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/product.css" rel="stylesheet">
@@ -33,7 +33,7 @@
     </div>
 
     <div class="container-fluid">
-      <div class="products" ng-controller="ProductController">
+      <div class="products" ng-controller="ProductsController">
         <div class="row product" ng-repeat="product in products">
           <div class="span2">
             <img ng:src="{{product.thumbnail}}" class="my-thumbnail" alt="">
