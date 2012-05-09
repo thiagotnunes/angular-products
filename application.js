@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express.createServer();
 var db = require('./src/model/db');
-var product = require('./src/model/product');
+var product = require('./src/model/product')(db);
 
 app.use(express.logger());
 app.use(express.static(__dirname + '/public'));
@@ -11,7 +11,9 @@ app.get('/', function(req, res) {
 });
 
 app.get('/products.json', function(req, res) {
-  res.json({ products: product.findAll() });
+  product.findAll(function(err, result) {
+    res.json({products: result});
+  });
 });
 
 app.listen(3000);
