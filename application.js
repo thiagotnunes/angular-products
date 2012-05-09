@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express.createServer();
+var db = require('./src/model/db');
 var product = require('./src/model/product');
 
 app.use(express.logger());
