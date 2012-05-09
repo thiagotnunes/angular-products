@@ -1,0 +1,17 @@
+{
+  "author": "Thiago Nunes <thiagotnunes@gmail.com>",
+  "name": "angular-products",
+  "description": "Testing angular along with nodejs",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/thiagotnunes/angular-products.git"
+  },
+  "engines": {
+    "node": "~0.6.14"
+  },
+  "dependencies": {
+    "express": ">= 2.5.9"
+  },
+  "devDependencies": {}
+}
