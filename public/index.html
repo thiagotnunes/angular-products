@@ -33,8 +33,16 @@
     </div>
 
     <div class="container-fluid">
+      <div class="search"> 
+        <div class="input-prepend">
+          <span id="search-icon" class="add-on">
+            <i class="icon-search"></i>
+          </span>
+          <input class="span2" id="search" type="text" ng-model="query" />
+        </div>
+      </div>
       <div class="products" ng-controller="ProductsController">
-        <div class="row product" ng-repeat="product in products">
+        <div class="row product" ng-repeat="product in products | filter:query">
           <div class="span2">
             <img ng:src="{{product.thumbnail}}" class="my-thumbnail" alt="">
           </div>

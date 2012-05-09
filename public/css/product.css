@@ -60,3 +60,14 @@ div.review {
   width: 60px;
   height: 60px;
 }
+
+.search {
+  margin-left: 10px;
+}
+
+/* Don't know why it is not aligning the icon in a right way
+ * This is a hack for it to work. This should be fixed asap.
+ */
+#search-icon {
+  margin-right: -5px;
+}
